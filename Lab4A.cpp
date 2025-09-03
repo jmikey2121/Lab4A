@@ -14,3 +14,18 @@ struct Color {
 int main() {
     //declaring vector of Color
     vector<Color> colors;
+
+       //generate random number between 25 and 50
+    srand(time(0));
+    int n = rand() % 26 + 25;
+
+    cout << "Generating " << n << " random colors...\n\n";
+
+    //pushing random colors into the vector
+    for (int i = 0; i < n; i++) {
+        Color temp;
+        temp.red   = rand() % 256;
+        temp.green = rand() % 256;
+        temp.blue  = rand() % 256;
+        colors.push_back(temp);
+    }
