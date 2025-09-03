@@ -29,3 +29,19 @@ int main() {
         temp.blue  = rand() % 256;
         colors.push_back(temp);
     }
+
+     //print table header
+    cout << "Color #   R Value   G Value   B Value\n";
+    cout << "--------------------------------------\n";
+
+    //print each color
+    for (int i = 0; i < colors.size(); i++) {
+        cout << i << "\t   "
+             << colors[i].red << "\t   "
+             << colors[i].green << "\t   "
+             << colors[i].blue << endl;
+    }
+
+    return 0;
+}
+
